@@ -52,7 +52,7 @@ const galleryItems: GalleryItem[] = [
 function GalleryCard({ item }: { item: GalleryItem }) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-[0.75rem] bg-[#171B17] border border-[#232A23] hover:border-[#2E382E] transition-all duration-300 ${
+      className={`group relative overflow-hidden rounded-[0.75rem] bg-[#171B17] border border-[#232A23] hover:border-[#2E382E] transition-all duration-300 min-w-0 ${
         item.span === "tall"
           ? "row-span-2"
           : item.span === "wide"
@@ -62,7 +62,7 @@ function GalleryCard({ item }: { item: GalleryItem }) {
     >
       <div
         className={`relative w-full ${
-          item.span === "tall" ? "h-full min-h-[420px]" : "h-56 sm:h-64"
+          item.span === "tall" ? "h-full min-h-[380px] sm:min-h-[420px]" : "h-52 sm:h-64"
         }`}
       >
         <Image
@@ -76,9 +76,9 @@ function GalleryCard({ item }: { item: GalleryItem }) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#090B0A]/85 via-[#090B0A]/20 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300" />
 
         {/* Label */}
-        <div className="absolute bottom-4 left-4 flex items-center gap-2 translate-y-0.5 group-hover:translate-y-0 transition-transform duration-300">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#B8F34A]" />
-          <span className="text-[#F2F4EF] text-xs font-semibold tracking-wider uppercase">
+        <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2 translate-y-0.5 group-hover:translate-y-0 transition-transform duration-300 min-w-0">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#B8F34A] shrink-0" />
+          <span className="text-[#F2F4EF] text-xs font-semibold tracking-wider uppercase truncate">
             {item.label}
           </span>
         </div>
@@ -91,26 +91,26 @@ export default function GallerySection() {
   return (
     <section
       id="uygulamalar"
-      className="py-24 lg:py-32 bg-[#111411] scroll-mt-20"
+      className="py-20 sm:py-24 lg:py-32 bg-[#111411] scroll-mt-20"
       aria-labelledby="gallery-heading"
     >
       <div className="container-site">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10 sm:mb-12">
           <div>
             <div className="section-label mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#B8F34A]" />
+              <span className="w-8 h-px bg-[#B8F34A] shrink-0" />
               Uygulama Detayları
             </div>
             <h2
               id="gallery-heading"
-              className="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-[#F2F4EF]"
+              className="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-[#F2F4EF] break-words"
             >
               İşçilik, yakından
               <br className="hidden sm:block" /> bakınca belli olur.
             </h2>
           </div>
-          <p className="text-[#A3AAA1] text-sm leading-relaxed max-w-xs">
+          <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed max-w-xs break-words">
             42Torque Detail Lab standartlarında stüdyo ortamı, pasta-cila, seramik kaplama ve PPF uygulamalarından kareler.
           </p>
         </div>

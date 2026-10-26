@@ -61,14 +61,14 @@ function AccordionItem({
           aria-expanded={isOpen}
           aria-controls={panelId}
           onClick={onToggle}
-          className="w-full flex items-center justify-between gap-4 py-5 text-left text-[#F2F4EF] font-medium text-base hover:text-[#B8F34A] transition-colors duration-200 group"
+          className="w-full flex items-center justify-between gap-4 py-4 sm:py-5 text-left text-[#F2F4EF] font-medium text-sm sm:text-base hover:text-[#B8F34A] transition-colors duration-200 group focus-visible:ring-1 focus-visible:ring-[#B8F34A] rounded-sm cursor-pointer"
         >
-          <span>{item.question}</span>
+          <span className="min-w-0 break-words pr-2 leading-snug">{item.question}</span>
           <span
             aria-hidden="true"
-            className="flex-shrink-0 w-7 h-7 rounded-full border border-[#2E382E] flex items-center justify-center text-[#B8F34A] group-hover:border-[#B8F34A] transition-colors duration-200"
+            className="flex-shrink-0 w-7 h-7 rounded-full border border-[#2E382E] flex items-center justify-center text-[#B8F34A] group-hover:border-[#B8F34A] transition-colors duration-200 shrink-0"
           >
-            {isOpen ? <Minus size={14} /> : <Plus size={14} />}
+            {isOpen ? <Minus size={14} className="shrink-0" /> : <Plus size={14} className="shrink-0" />}
           </span>
         </button>
       </h3>
@@ -79,8 +79,8 @@ function AccordionItem({
         aria-labelledby={buttonId}
         hidden={!isOpen}
       >
-        <div className="pb-5 pr-10">
-          <p className="text-[#A3AAA1] text-sm leading-relaxed">{item.answer}</p>
+        <div className="pb-5 pr-2 sm:pr-8">
+          <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed break-words">{item.answer}</p>
         </div>
       </div>
     </div>
@@ -97,24 +97,24 @@ export default function FaqSection() {
   return (
     <section
       id="sss"
-      className="py-24 lg:py-32 bg-[#111411] scroll-mt-20"
+      className="py-20 sm:py-24 lg:py-32 bg-[#111411] scroll-mt-20"
       aria-labelledby="faq-heading"
     >
       <div className="container-site">
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-20">
           {/* Left — heading */}
           <div>
             <div className="section-label mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#B8F34A]" />
+              <span className="w-8 h-px bg-[#B8F34A] shrink-0" />
               SSS
             </div>
             <h2
               id="faq-heading"
-              className="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-[#F2F4EF] mb-4"
+              className="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-[#F2F4EF] mb-4 break-words"
             >
               Aklındaki Sorular
             </h2>
-            <p className="text-[#A3AAA1] text-sm leading-relaxed">
+            <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed break-words">
               Yanıtını bulamadığın sorular için iletişim bölümünden ulaşabilirsin.
             </p>
           </div>

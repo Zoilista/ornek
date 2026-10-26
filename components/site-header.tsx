@@ -110,14 +110,14 @@ export default function SiteHeader() {
         {/* Desktop navigation */}
         <nav
           aria-label="Ana gezinme"
-          className="hidden lg:flex items-center gap-8"
+          className="hidden lg:flex items-center gap-5 xl:gap-8 shrink-0"
         >
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-[#A3AAA1] text-sm font-medium hover:text-[#F2F4EF] transition-colors duration-200 relative group"
+              className="text-[#A3AAA1] text-xs xl:text-sm font-medium hover:text-[#F2F4EF] transition-colors duration-200 relative group py-1"
             >
               {item.label}
               <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-[#B8F34A] transition-all duration-200 group-hover:w-full" />
@@ -129,7 +129,7 @@ export default function SiteHeader() {
         <a
           href="#hizmetler"
           onClick={(e) => handleNavClick(e, "#hizmetler")}
-          className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-[#B8F34A] text-[#090B0A] text-sm font-semibold rounded-[0.375rem] hover:bg-[#8fc435] transition-colors duration-200"
+          className="hidden lg:inline-flex items-center justify-center gap-2 px-4 xl:px-5 py-2.5 bg-[#B8F34A] text-[#090B0A] text-xs xl:text-sm font-semibold rounded-[0.375rem] hover:bg-[#8fc435] transition-colors shrink-0 whitespace-nowrap"
         >
           Hizmetleri Keşfet
         </a>
@@ -141,7 +141,7 @@ export default function SiteHeader() {
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
           onClick={() => setIsOpen((v) => !v)}
-          className="lg:hidden flex items-center justify-center w-10 h-10 rounded-[0.375rem] text-[#F2F4EF] hover:bg-[#171B17] transition-colors duration-200"
+          className="lg:hidden flex items-center justify-center w-10 h-10 rounded-[0.375rem] text-[#F2F4EF] hover:bg-[#171B17] transition-colors duration-200 shrink-0 cursor-pointer"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>

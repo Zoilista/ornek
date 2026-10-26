@@ -14,13 +14,13 @@ export default function SiteFooter() {
 
   return (
     <footer className="bg-[#111411] border-t border-[#232A23]" role="contentinfo">
-      <div className="container-site py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="container-site py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {/* Brand column */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 min-w-0">
             {/* Wordmark */}
             <div className="flex items-center gap-3 mb-4">
-              <div aria-hidden="true" className="w-7 h-7 flex-shrink-0">
+              <div aria-hidden="true" className="w-7 h-7 shrink-0">
                 <svg
                   viewBox="0 0 32 32"
                   fill="none"
@@ -47,20 +47,20 @@ export default function SiteFooter() {
               </div>
             </div>
 
-            <p className="text-[#A3AAA1] text-sm leading-relaxed max-w-sm">
+            <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed max-w-sm break-words">
               {siteConfig.slogan}
             </p>
 
             {/* Demo notice */}
             {siteConfig.isDemo && (
-              <p className="mt-4 text-[#A3AAA1]/50 text-xs italic">
+              <p className="mt-4 text-[#A3AAA1]/50 text-xs italic break-words">
                 {siteConfig.demoNotice}
               </p>
             )}
           </div>
 
           {/* Quick links */}
-          <nav aria-label="Footer gezinmesi">
+          <nav aria-label="Footer gezinmesi" className="min-w-0">
             <p className="text-[#F2F4EF] text-xs font-semibold tracking-widest uppercase mb-4">
               Bağlantılar
             </p>
@@ -69,7 +69,7 @@ export default function SiteFooter() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-[#A3AAA1] text-sm hover:text-[#B8F34A] transition-colors duration-200"
+                    className="text-[#A3AAA1] text-xs sm:text-sm hover:text-[#B8F34A] transition-colors duration-200 py-0.5 inline-block"
                   >
                     {link.label}
                   </a>
@@ -80,12 +80,12 @@ export default function SiteFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-[#232A23] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <p className="text-[#A3AAA1]/60 text-xs">
+        <div className="mt-10 sm:mt-12 pt-6 border-t border-[#232A23] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs">
+          <p className="text-[#A3AAA1]/60">
             © {year} {siteConfig.brandName} {siteConfig.brandSuffix}. Tüm
             hakları saklıdır.
           </p>
-          <p className="text-[#A3AAA1]/40 text-xs">
+          <p className="text-[#A3AAA1]/40">
             Portföy amaçlı hazırlanmıştır.
           </p>
         </div>

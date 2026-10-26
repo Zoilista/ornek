@@ -98,36 +98,36 @@ function ServiceCard({
   onOpenDetails: (service: Service) => void;
 }) {
   return (
-    <div className="group relative flex flex-col bg-[#171B17] border border-[#232A23] rounded-[0.75rem] overflow-hidden hover:border-[#2E382E] transition-all duration-300 hover:-translate-y-1">
+    <div className="group relative flex flex-col h-full bg-[#171B17] border border-[#232A23] rounded-[0.75rem] overflow-hidden hover:border-[#2E382E] transition-all duration-300 hover:-translate-y-1">
       {/* Image */}
-      <div className="relative h-52 overflow-hidden bg-[#111411]">
+      <div className="relative h-48 sm:h-52 overflow-hidden bg-[#111411] shrink-0">
         <Image
           src={service.imageUrl}
           alt={service.imageAlt}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#171B17] via-transparent to-transparent" />
 
         {/* Number badge */}
-        <div className="absolute top-4 left-4 text-[#B8F34A] text-xs font-bold tracking-[0.15em] bg-[#090B0A]/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-[#B8F34A]/30">
+        <div className="absolute top-3.5 left-3.5 sm:top-4 sm:left-4 text-[#B8F34A] text-xs font-bold tracking-[0.15em] bg-[#090B0A]/85 backdrop-blur-sm px-2.5 py-1 rounded-full border border-[#B8F34A]/30 shrink-0">
           {service.number}
         </div>
 
         {/* Duration badge */}
-        <div className="absolute top-4 right-4 text-[#A3AAA1] text-[0.6875rem] font-medium bg-[#090B0A]/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-[#232A23] flex items-center gap-1.5">
-          <Clock size={11} className="text-[#B8F34A]" />
-          <span>{service.duration}</span>
+        <div className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 text-[#A3AAA1] text-[0.6875rem] font-medium bg-[#090B0A]/85 backdrop-blur-sm px-2.5 py-1 rounded-full border border-[#232A23] flex items-center gap-1.5 shrink-0 max-w-[calc(100%-4.5rem)]">
+          <Clock size={11} className="text-[#B8F34A] shrink-0" />
+          <span className="truncate">{service.duration}</span>
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 p-6 gap-3">
-        <h3 className="text-[#F2F4EF] font-semibold text-lg leading-snug">
+      <div className="flex flex-col flex-1 p-5 sm:p-6 gap-3 min-w-0">
+        <h3 className="text-[#F2F4EF] font-semibold text-base sm:text-lg leading-snug break-words">
           {service.title}
         </h3>
-        <p className="text-[#A3AAA1] text-sm leading-relaxed flex-1">
+        <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed flex-1 break-words">
           {service.shortDescription}
         </p>
 
@@ -137,13 +137,13 @@ function ServiceCard({
           onClick={() => onOpenDetails(service)}
           aria-haspopup="dialog"
           aria-label={`${service.title} hizmet detaylarını incele`}
-          className="flex items-center justify-between w-full pt-3 mt-1 border-t border-[#232A23] text-left group/btn focus-visible:ring-1 focus-visible:ring-[#B8F34A]"
+          className="flex items-center justify-between gap-3 w-full pt-3.5 mt-auto border-t border-[#232A23] text-left group/btn focus-visible:ring-1 focus-visible:ring-[#B8F34A] rounded-sm cursor-pointer"
         >
-          <span className="text-[#B8F34A] text-xs font-semibold tracking-wide uppercase group-hover/btn:underline">
+          <span className="text-[#B8F34A] text-xs font-semibold tracking-wide uppercase group-hover/btn:underline min-w-0 break-words leading-tight">
             Uygulama Detayları
           </span>
-          <div className="w-6 h-6 rounded-full bg-[#111411] border border-[#232A23] flex items-center justify-center text-[#B8F34A] group-hover/btn:border-[#B8F34A] group-hover/btn:bg-[#B8F34A] group-hover/btn:text-[#090B0A] transition-colors duration-200">
-            <ArrowUpRight size={13} />
+          <div className="w-6 h-6 rounded-full bg-[#111411] border border-[#232A23] flex items-center justify-center text-[#B8F34A] shrink-0 group-hover/btn:border-[#B8F34A] group-hover/btn:bg-[#B8F34A] group-hover/btn:text-[#090B0A] transition-colors duration-200">
+            <ArrowUpRight size={13} className="shrink-0" />
           </div>
         </button>
       </div>
@@ -185,30 +185,30 @@ export default function ServicesSection() {
   return (
     <section
       id="hizmetler"
-      className="py-24 lg:py-32 bg-[#090B0A] scroll-mt-20"
+      className="py-20 sm:py-24 lg:py-32 bg-[#090B0A] scroll-mt-20"
       aria-labelledby="services-heading"
     >
       <div className="container-site">
         {/* Header */}
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-12 sm:mb-16">
           <div className="section-label mb-4 flex items-center gap-3">
-            <span className="w-8 h-px bg-[#B8F34A]" />
+            <span className="w-8 h-px bg-[#B8F34A] shrink-0" />
             Hizmetler
           </div>
           <h2
             id="services-heading"
-            className="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-[#F2F4EF] mb-4"
+            className="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-[#F2F4EF] mb-4 break-words"
           >
             Aracına Özel Bakım Çözümleri
           </h2>
-          <p className="text-[#A3AAA1] text-base leading-relaxed">
+          <p className="text-[#A3AAA1] text-sm sm:text-base leading-relaxed break-words">
             Her yüzeyin yapısına uygun yöntem, kontrollü stüdyo koşulları ve
             endüstri standardı kimyasallarla hassas işçilik.
           </p>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Cards grid: 1 col on mobile, 2 cols on tablet/small-desktop, 4 cols on large desktop (xl) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6">
           {services.map((service) => (
             <ServiceCard
               key={service.number}
@@ -225,7 +225,7 @@ export default function ServicesSection() {
           role="dialog"
           aria-modal="true"
           aria-labelledby="service-modal-title"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6"
         >
           {/* Backdrop */}
           <div
@@ -235,44 +235,44 @@ export default function ServicesSection() {
           />
 
           {/* Modal Card */}
-          <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#171B17] border border-[#2E382E] rounded-[1rem] p-6 sm:p-8 shadow-2xl z-10 flex flex-col">
+          <div className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto bg-[#171B17] border border-[#2E382E] rounded-[1rem] p-5 sm:p-8 shadow-2xl z-10 flex flex-col my-auto">
             {/* Header with Close */}
-            <div className="flex items-start justify-between gap-4 pb-5 border-b border-[#232A23]">
-              <div className="flex items-center gap-3">
-                <span className="text-[#B8F34A] text-xs font-bold tracking-[0.15em] bg-[#090B0A] px-2.5 py-1 rounded-full border border-[#B8F34A]/30">
+            <div className="flex items-center justify-between gap-4 pb-4 sm:pb-5 border-b border-[#232A23]">
+              <div className="flex items-center gap-3 min-w-0">
+                <span className="text-[#B8F34A] text-xs font-bold tracking-[0.15em] bg-[#090B0A] px-2.5 py-1 rounded-full border border-[#B8F34A]/30 shrink-0">
                   {selectedService.number}
                 </span>
-                <span className="text-[#A3AAA1] text-xs font-medium flex items-center gap-1.5">
-                  <Clock size={13} className="text-[#B8F34A]" />
-                  {selectedService.duration}
+                <span className="text-[#A3AAA1] text-xs font-medium flex items-center gap-1.5 truncate">
+                  <Clock size={13} className="text-[#B8F34A] shrink-0" />
+                  <span className="truncate">{selectedService.duration}</span>
                 </span>
               </div>
               <button
                 type="button"
                 onClick={() => setSelectedService(null)}
                 aria-label="Kapat"
-                className="w-9 h-9 rounded-full bg-[#111411] border border-[#232A23] flex items-center justify-center text-[#A3AAA1] hover:text-[#F2F4EF] hover:border-[#B8F34A] transition-colors"
+                className="w-9 h-9 rounded-full bg-[#111411] border border-[#232A23] flex items-center justify-center text-[#A3AAA1] hover:text-[#F2F4EF] hover:border-[#B8F34A] transition-colors shrink-0 cursor-pointer"
               >
                 <X size={18} />
               </button>
             </div>
 
             {/* Modal Body */}
-            <div className="py-6 space-y-6">
+            <div className="py-5 sm:py-6 space-y-5 sm:space-y-6">
               <div>
                 <h3
                   id="service-modal-title"
-                  className="text-2xl font-bold text-[#F2F4EF] mb-3"
+                  className="text-xl sm:text-2xl font-bold text-[#F2F4EF] mb-2.5 break-words"
                 >
                   {selectedService.title}
                 </h3>
-                <p className="text-[#A3AAA1] text-sm leading-relaxed">
+                <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed break-words">
                   {selectedService.fullDescription}
                 </p>
               </div>
 
               {/* Image banner inside modal */}
-              <div className="relative h-48 w-full rounded-[0.75rem] overflow-hidden border border-[#232A23]">
+              <div className="relative h-44 sm:h-52 w-full rounded-[0.75rem] overflow-hidden border border-[#232A23] shrink-0">
                 <Image
                   src={selectedService.imageUrl}
                   alt={selectedService.imageAlt}
@@ -286,20 +286,20 @@ export default function ServicesSection() {
               {/* Highlights */}
               <div>
                 <h4 className="text-xs font-semibold tracking-wider uppercase text-[#B8F34A] mb-3 flex items-center gap-2">
-                  <ShieldCheck size={15} />
+                  <ShieldCheck size={15} className="shrink-0" />
                   Uygulama Standartları
                 </h4>
-                <ul className="grid sm:grid-cols-2 gap-2.5">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {selectedService.features.map((feature, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-2.5 text-xs text-[#F2F4EF] bg-[#111411] p-3 rounded-[0.5rem] border border-[#232A23]"
+                      className="flex items-start gap-2.5 text-xs text-[#F2F4EF] bg-[#111411] p-3 rounded-[0.5rem] border border-[#232A23] min-w-0 break-words"
                     >
                       <CheckCircle2
                         size={14}
-                        className="text-[#B8F34A] flex-shrink-0 mt-0.5"
+                        className="text-[#B8F34A] shrink-0 mt-0.5"
                       />
-                      <span>{feature}</span>
+                      <span className="leading-relaxed">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -307,17 +307,17 @@ export default function ServicesSection() {
             </div>
 
             {/* Footer Actions */}
-            <div className="pt-5 border-t border-[#232A23] flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span className="text-[#A3AAA1] text-xs">
+            <div className="pt-4 sm:pt-5 border-t border-[#232A23] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
+              <span className="text-[#A3AAA1] text-xs leading-relaxed">
                 Araç durumunuza göre kişiselleştirilmiş program hazırlanır.
               </span>
               <button
                 type="button"
                 onClick={handleContactScroll}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#B8F34A] text-[#090B0A] text-sm font-semibold rounded-[0.375rem] hover:bg-[#8fc435] transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#B8F34A] text-[#090B0A] text-xs sm:text-sm font-semibold rounded-[0.375rem] hover:bg-[#8fc435] transition-colors shrink-0 text-center cursor-pointer"
               >
                 <span>İletişime Geç & Bilgi Al</span>
-                <ArrowRight size={15} />
+                <ArrowRight size={15} className="shrink-0" />
               </button>
             </div>
           </div>
