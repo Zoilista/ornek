@@ -10,7 +10,7 @@ interface Service {
   shortDescription: string;
   imageUrl: string;
   imageAlt: string;
-  duration: string;
+  estimatedDuration: string;
   features: string[];
   fullDescription: string;
 }
@@ -20,73 +20,73 @@ const services: Service[] = [
     number: "01",
     title: "Detaylı İç & Dış Temizlik",
     shortDescription:
-      "Aracının iç ve dış yüzeyleri için hassas, pH nötr ve kapsamlı temizlik uygulaması.",
+      "Aracınızın iç ve dış yüzeyleri için hassas, pH dengeli ve kapsamlı temizlik uygulaması.",
     imageUrl: "/images/service-interior-detailing.jpg",
     imageAlt:
-      "Kabin içi havalandırma kanalları ve deri direksiyonun narin fırça ile detay temizliği",
-    duration: "1 İş Günü",
+      "Kabin içi havalandırma kanalları ve kokpit aksamının detay fırçasıyla temizliği",
+    estimatedDuration: "Tahmini 1 Gün (Kapsama göre değişir)",
     features: [
-      "pH nötr, kumaş ve deri dokusuna duyarlı premium şampuanlar",
-      "Koltuk ve döşemelerin derinlemesine buharlı ekstraksiyonu",
+      "pH dengeli, kumaş ve deri dokusuna duyarlı araç bakım şampuanları",
+      "Koltuk ve döşemelerin derinlemesine buharlı temizliği",
       "Klima kanalları ve kokpit aksamının detay fırçalarıyla arındırılması",
-      "Deri yüzeyler için UV koruyucu mat besleyici bakım",
+      "Deri ve plastik yüzeyler için koruyucu ve mat besleyici bakım",
     ],
     fullDescription:
-      "Standart araç yıkamadan farklı olarak; kapı fitillerinden havalandırma ızgaralarına, pedal takımlarından tavan döşemesine kadar her köşe at kılı fırçalar ve özel formüllerle el işçiliğiyle arındırılır.",
+      "Standart araç yıkamanın ötesinde; kapı fitillerinden havalandırma ızgaralarına, döşemelerden kokpit detaylarına kadar tüm yüzeyler araç materyallerine uygun ürünler ve hassas fırçalar yardımıyla özenle temizlenir.",
   },
   {
     number: "02",
     title: "Pasta & Cila (Boya Düzeltme)",
     shortDescription:
-      "Girdap izleri, kılcal çizikler ve oksidasyonu gideren kademeli düzeltme işlemi.",
+      "Boya yüzeyindeki hare ve ince çiziklerin durumuna göre kademeli polisaj uygulaması.",
     imageUrl: "/images/service-paint-correction.jpg",
     imageAlt:
-      "Dual-action polisaj makinesi ve LED kontrol ışığıyla otomobil kaputunda kademeli boya düzeltme",
-    duration: "1 - 2 İş Günü",
+      "Dual-action polisaj makinesi ile otomobil kaputunda boya düzeltme işlemi",
+    estimatedDuration: "Tahmini 1 - 2 Gün (Vernik durumuna göre değişir)",
     features: [
-      "Dijital mikron cihazı ile boya kalınlık analizi",
-      "Kil hamuru ve demir tozu temizliği ile yüzey dekontaminasyonu",
-      "Kademeli pasta ile hare, girdap ve çiziklerin kalıcı giderilmesi",
-      "Silikonsuz, maskeleme yapmayan saf ayna parlaklığı",
+      "Boya kalınlığı ve vernik durumu göz önüne alınarak yapılan yüzey analizi",
+      "Kil hamuru ve demir tozu temizliği ile yüzey arındırma",
+      "Vernik kalınlığına uygun kademeli polisaj adımları",
+      "Maskeleme yapmayan, boya berraklığını öne çıkaran cila uygulaması",
     ],
     fullDescription:
-      "Boya yüzeyindeki kusurları geçici cilalarla doldurmak yerine, vernik tabakasına zarar vermeden mikron seviyesinde düzeltiriz. Sonuç; ışık altında sıfır hare ve kusursuz derinliktir.",
+      "Boya yüzeyindeki kusurları geçici dolgularla kapatmak yerine, vernik yapısı korunarak mikron seviyesinde polisaj işlemi uygulanır. Amaç; boyanın durumuna göre mümkün olan en temiz ve berrak yüzey derinliğini elde etmektir.",
   },
   {
     number: "03",
     title: "Seramik Kaplama",
     shortDescription:
-      "Vernik katmanına moleküler düzeyde bağlanan dayanıklı 9H nano koruma kalkanı.",
+      "Boya yüzeyine koruyucu kaplama uygulanarak su ve kir tutunmasının azaltılmasına yardımcı olunur.",
     imageUrl: "/images/service-ceramic-coating.jpg",
     imageAlt:
-      "Süet aplikatör bloğu ile derin parlaklık sağlayan 9H nano seramik kaplama uygulaması",
-    duration: "2 İş Günü (Kürlenme Dahil)",
+      "Aplikatör bloğu ile araç yüzeyine koruyucu seramik kaplama uygulaması",
+    estimatedDuration: "Tahmini 2 Gün (Kürlenme süresi dahil)",
     features: [
-      "9H sertlik standardında kristalize nano seramik tabaka",
-      "Kuş pisliği, asit yağmuru ve reçinelere karşı kimyasal bariyer",
-      "Maksimum hidrofobik su ve kir iticilik (kontakt açısı >110°)",
-      "Yıkamalarda zahmetsiz temizlik ve derin cam parlaklığı",
+      "Boya yüzeyiyle bütünleşen koruyucu seramik kaplama katmanı",
+      "Kuş pisliği, reçine ve yol kirlerine karşı direnç desteği",
+      "Yüksek hidrofobik etki ile su ve kir iticilik",
+      "Rutin araç yıkamalarında kolay temizlenme ve uzun süreli parlaklık desteği",
     ],
     fullDescription:
-      "Boya düzeltme sonrasında uygulanan seramik kaplama, kontrollü stüdyo ortamında panellere tek tek yedirilir ve kürlenmeye bırakılır. Aracınız aylarca ilk günkü vitrin parlaklığını korur.",
+      "Boya düzeltme ve yüzey hazırlığı sonrasında uygulanan koruyucu kaplama, kontrollü atölye koşullarında yüzeye uygulanır ve kürlenmeye bırakılır. Yüzeyde hidrofobik bir katman oluşturarak çevresel kirleticilerin boyaya tutunmasını zorlaştırır.",
   },
   {
     number: "04",
     title: "Boya Koruma Filmi (PPF)",
     shortDescription:
-      "Taş çarpmaları, sürtmeler ve çizilmelere karşı kendi kendini onaran şeffaf zırh.",
+      "Şeffaf boya koruma filmi, günlük kullanımda oluşabilecek taş izi ve yüzey sürtünmelerine karşı ek bir koruma katmanı sağlar.",
     imageUrl: "/images/service-paint-protection.jpg",
     imageAlt:
-      "Spor araç ön çamurluk ve far çevresine şeffaf boya koruma filmi (PPF) montajı",
-    duration: "2 - 3 İş Günü",
+      "Araç ön panellerine şeffaf boya koruma filmi (PPF) montajı",
+    estimatedDuration: "Tahmini 2 - 3 Gün (Uygulama alanına göre değişir)",
     features: [
-      "Kendi kendini yenileyen (self-healing) termoplastik poliüretan",
-      "Yüksek optik berraklık; sararma ve portakal kabuğu yapmaz",
-      "Orijinal boyayı taş vuruğu, anahtar çiziği ve sürtmelerden korur",
-      "Milimetrik kenar kıvırma tekniğiyle neredeyse görünmez montaj",
+      "Yüksek optik berraklığa sahip şeffaf termoplastik poliüretan (TPU) film",
+      "Isı etkisiyle hafif kılcal çizikleri tolere edebilen üst katman yapısı",
+      "Orijinal boya yüzeyini taş çarpmaları ve sürtünme izlerine karşı koruma desteği",
+      "Panel hatlarına uygun titiz montaj ve kenar kıvırma işçiliği",
     ],
     fullDescription:
-      "Yüksek hızda seyahat eden araçların en büyük tehdidi olan taş darbeleri ve dış etkenlere karşı en üst düzey fiziksel kalkandır. Isı ile kendi yüzeyindeki ince çizikleri kendiliğinden kapatır.",
+      "Özellikle ön kaput, tampon ve çamurluk gibi darbeye açık bölgelerde veya tüm gövdede uygulanabilen şeffaf koruma filmi, sürüş esnasında taş fırlaması ve hafif sürtünmelere karşı fiziksel bir koruma kalkanı sunar.",
   },
 ];
 
@@ -114,12 +114,6 @@ function ServiceCard({
         <div className="absolute top-3.5 left-3.5 sm:top-4 sm:left-4 text-[#B8F34A] text-xs font-bold tracking-[0.15em] bg-[#090B0A]/85 backdrop-blur-sm px-2.5 py-1 rounded-full border border-[#B8F34A]/30 shrink-0">
           {service.number}
         </div>
-
-        {/* Duration badge */}
-        <div className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 text-[#A3AAA1] text-[0.6875rem] font-medium bg-[#090B0A]/85 backdrop-blur-sm px-2.5 py-1 rounded-full border border-[#232A23] flex items-center gap-1.5 shrink-0 max-w-[calc(100%-4.5rem)]">
-          <Clock size={11} className="text-[#B8F34A] shrink-0" />
-          <span className="truncate">{service.duration}</span>
-        </div>
       </div>
 
       {/* Content */}
@@ -127,7 +121,7 @@ function ServiceCard({
         <h3 className="text-[#F2F4EF] font-semibold text-base sm:text-lg leading-snug mb-2">
           {service.title}
         </h3>
-        <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed mb-4 flex-1">
+        <p className="text-[#A3AAA1] text-sm leading-relaxed mb-4 flex-1">
           {service.shortDescription}
         </p>
 
@@ -199,11 +193,11 @@ export default function ServicesSection() {
             id="services-heading"
             className="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-[#F2F4EF] mb-4 break-words"
           >
-            Aracına Özel Bakım Çözümleri
+            Aracınıza Özel Bakım Çözümleri
           </h2>
           <p className="text-[#A3AAA1] text-sm sm:text-base leading-relaxed break-words">
             Her yüzeyin yapısına uygun yöntem, kontrollü stüdyo koşulları ve
-            endüstri standardı kimyasallarla hassas işçilik.
+            özenli işçilikle profesyonel uygulamalar.
           </p>
         </div>
 
@@ -244,7 +238,7 @@ export default function ServicesSection() {
                 </span>
                 <span className="text-[#A3AAA1] text-xs font-medium flex items-center gap-1.5 truncate">
                   <Clock size={13} className="text-[#B8F34A] shrink-0" />
-                  <span className="truncate">{selectedService.duration}</span>
+                  <span className="truncate">{selectedService.estimatedDuration}</span>
                 </span>
               </div>
               <button
@@ -266,7 +260,7 @@ export default function ServicesSection() {
                 >
                   {selectedService.title}
                 </h3>
-                <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed break-words">
+                <p className="text-[#A3AAA1] text-sm leading-relaxed break-words">
                   {selectedService.fullDescription}
                 </p>
               </div>
@@ -309,7 +303,7 @@ export default function ServicesSection() {
             {/* Footer Actions */}
             <div className="pt-4 sm:pt-5 border-t border-[#232A23] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
               <span className="text-[#A3AAA1] text-xs leading-relaxed">
-                Araç durumunuza göre kişiselleştirilmiş program hazırlanır.
+                Uygulama kapsamı ve süresi, aracınızın fiziksel durumuna göre planlanır.
               </span>
               <button
                 type="button"

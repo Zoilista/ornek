@@ -12,39 +12,39 @@ const galleryItems: GalleryItem[] = [
   {
     id: "g1",
     src: "/images/gallery-studio.jpg",
-    alt: "42Torque stüdyo showroomunda hegzagon LED aydınlatması altında sergilenen süper spor araç",
+    alt: "Stüdyo aydınlatması altında sergilenen spor otomobil ve showroom alanı",
     label: "Stüdyo & Showroom",
     span: "tall",
   },
   {
     id: "g2",
     src: "/images/gallery-paint-correction.jpg",
-    alt: "Metalik mavi spor otomobil panelinde profesyonel polisaj makinesi ve pasta ile ayna parlaklığı düzeltme",
+    alt: "Otomobil yüzeyinde polisaj makinesi ile boya düzeltme işlemi",
     label: "Boya Düzeltme",
   },
   {
     id: "g3",
     src: "/images/gallery-ceramic-beading.jpg",
-    alt: "Seramik kaplamalı derin siyah boya üzerinde hegzagon tavan ışığı yansıması ve kusursuz hidrofobik su damlacıkları",
+    alt: "Koruma uygulanmış araç yüzeyinde hidrofobik su damlacıkları ve ışık yansıması",
     label: "Hidrofobik Koruma",
   },
   {
     id: "g4",
     src: "/images/gallery-interior-wide.jpg",
-    alt: "Kusursuz kondisyonda alcantara direksiyon simidi, yeşil dikiş detaylı karbon bucket koltuklar ve deri kokpit",
+    alt: "Spor otomobil kabin içi detayları, alcantara direksiyon ve koltuk yapısı",
     label: "Kabin Detaylandırma",
     span: "wide",
   },
   {
     id: "g5",
     src: "/images/gallery-ppf-installation.jpg",
-    alt: "Karbon ayna kapağı üzerine hassas şeffaf boya koruma filmi montajı ve montaj solüsyonu",
+    alt: "Araç ayna kapağı üzerine şeffaf boya koruma filmi (PPF) yerleşimi",
     label: "PPF Şeffaf Kaplama",
   },
   {
     id: "g6",
     src: "/images/gallery-equipment.jpg",
-    alt: "Paslanmaz servis arabasında düzenli profesyonel polisaj makineleri, renkli pedler, kimyasallar ve fırçalar",
+    alt: "Detaylandırma atölyesinde kullanılan polisaj pedleri, makineleri ve bakım ekipmanları",
     label: "Ekipman & Kimyasallar",
   },
 ];
@@ -100,7 +100,7 @@ export default function GallerySection() {
           <div>
             <div className="section-label mb-4 flex items-center gap-3">
               <span className="w-8 h-px bg-[#B8F34A] shrink-0" />
-              Uygulama Detayları
+              Uygulama Galerisi
             </div>
             <h2
               id="gallery-heading"
@@ -110,8 +110,8 @@ export default function GallerySection() {
               <br className="hidden sm:block" /> bakınca belli olur.
             </h2>
           </div>
-          <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed max-w-xs break-words">
-            42Torque Detail Lab standartlarında stüdyo ortamı, pasta-cila, seramik kaplama ve PPF uygulamalarından kareler.
+          <p className="text-[#A3AAA1] text-sm leading-relaxed max-w-sm break-words">
+            Araç bakım, boya düzeltme, seramik kaplama ve koruma filmi süreçlerini temsil eden örnek stüdyo ve uygulama fotoğrafları.
           </p>
         </div>
 

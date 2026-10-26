@@ -36,7 +36,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-detailing-studio.jpg"
-          alt="42Torque Detail Lab stüdyosunda tavan hegzagon LED aydınlatması altında kusursuz detaylandırılmış süper spor araç"
+          alt="Stüdyo aydınlatması altında profesyonel araç detaylandırma uygulaması"
           fill
           priority
           className="object-cover object-center"
@@ -69,7 +69,7 @@ export default function HeroSection() {
 
             {/* Supporting copy */}
             <p className="text-[#A3AAA1] text-base sm:text-lg leading-relaxed mb-8 max-w-xl break-words animate-fade-in-up animation-delay-200">
-              Aracının görünümünü korumak ve her çizgide daha fazlasını görmek
+              Aracınızın görünümünü korumak ve her çizgide daha fazlasını görmek
               için profesyonel detailing çözümleri.
             </p>
 
@@ -81,19 +81,6 @@ export default function HeroSection() {
               <ScrollCTA href="#iletisim" variant="secondary">
                 İletişime Geç
               </ScrollCTA>
-            </div>
-
-            {/* Technical detail pills */}
-            <div className="mt-12 sm:mt-16 flex flex-wrap items-center gap-3 sm:gap-4 animate-fade-in-up animation-delay-400">
-              <div className="flex items-center gap-2 text-[#A3AAA1] text-xs font-medium tracking-wide">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B8F34A] shrink-0" />
-                <span>Her yüzeyde hassasiyet</span>
-              </div>
-              <div className="w-px h-4 bg-[#2E382E] hidden sm:block" />
-              <div className="flex items-center gap-2 text-[#A3AAA1] text-xs font-medium tracking-wide">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B8F34A] shrink-0" />
-                <span>Her detayda kalite</span>
-              </div>
             </div>
           </div>
         </div>

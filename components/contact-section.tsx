@@ -18,7 +18,7 @@ export default function ContactSection() {
       badge: "TELEFON",
       title: "Telefon Danışmanlığı",
       description:
-        "Uygulama seçenekleri, boya koruma paketleri ve randevu planlaması için doğrudan görüşün.",
+        "Uygulama seçenekleri, boya koruma kapsamları ve genel süreç hakkında bilgi alma kanalı.",
       icon: <Phone size={20} className="shrink-0" />,
       value: siteConfig.phone,
       href: siteConfig.phone ? `tel:${siteConfig.phone}` : null,
@@ -28,7 +28,7 @@ export default function ContactSection() {
       badge: "WHATSAPP",
       title: "WhatsApp Ön Değerlendirme",
       description:
-        "Aracınızın güncel fotoğraflarını ileterek hızlı durum analizi ve servis tavsiyesi talep edin.",
+        "Aracınızın fotoğrafları üzerinden durum incelemesi ve uygun bakım önerisi alma kanalı.",
       icon: <MessageCircle size={20} className="shrink-0" />,
       value: siteConfig.whatsapp,
       href: siteConfig.whatsapp
@@ -38,9 +38,9 @@ export default function ContactSection() {
     {
       id: "konum",
       badge: "KONUM",
-      title: "Stüdyo Randevusu",
+      title: "Atölye Ziyareti",
       description:
-        "Kontrollü LED aydınlatma altında boya mikron ölçümü ve yüzey analiz seansı.",
+        "Araç yüzeyini ve boya durumunu stüdyo ortamında yerinde inceleme kanalı.",
       icon: <MapPin size={20} className="shrink-0" />,
       value: siteConfig.location,
       href: siteConfig.locationMapUrl,
@@ -66,14 +66,14 @@ export default function ContactSection() {
             id="contact-heading"
             className="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-[#F2F4EF] mb-4 break-words"
           >
-            Aracın için doğru uygulamayı
+            Aracınız için doğru uygulamayı
             <br className="hidden sm:block" /> birlikte belirleyelim.
           </h2>
 
           <p className="text-[#A3AAA1] text-sm sm:text-base leading-relaxed mb-10 sm:mb-12 max-w-2xl break-words">
-            42Torque Detail Lab, her araca özel bireysel değerlendirme ve
-            kontrollü randevu sistemiyle hizmet sunar. İhtiyacınıza en uygun
-            uygulama paketini belirlemek için bize ulaşın.
+            42Torque Detail Lab, araç bakım ve koruma uygulamalarını sergilemek
+            amacıyla hazırlanmış bir portföy çalışmasıdır. İhtiyacınıza uygun
+            çözümleri inceleyebilir veya bizimle iletişime geçebilirsiniz.
           </p>
 
           {/* 3 Contact cards: 1 col on mobile, 2 cols on tablet, 3 cols on large desktop */}
@@ -117,7 +117,7 @@ export default function ContactSection() {
                   <h3 className="text-[#F2F4EF] font-semibold text-base sm:text-lg mb-2 leading-snug">
                     {ch.title}
                   </h3>
-                  <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed flex-1 mb-4">
+                  <p className="text-[#A3AAA1] text-sm leading-relaxed flex-1 mb-4">
                     {ch.description}
                   </p>
 
@@ -130,7 +130,7 @@ export default function ContactSection() {
                     ) : (
                       <span className="text-[#A3AAA1]/70 text-xs flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#B8F34A]/50 shrink-0" />
-                        <span>Canlı yayında aktifleşir</span>
+                        <span>Örnek İletişim Kanalı</span>
                       </span>
                     )}
                   </div>
@@ -176,22 +176,18 @@ export default function ContactSection() {
                     <Sparkles size={14} />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[#A3AAA1] text-xs leading-relaxed">
+                    <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed">
                       <span className="text-[#F2F4EF] font-medium mr-1.5">
-                        Kurgusal Portföy Gösterimi:
+                        Portföy ve Konsept Gösterimi:
                       </span>
-                      Müşteri yayını sırasında telefon, WhatsApp ve atölye adresi{" "}
-                      <code className="text-[#B8F34A] font-mono text-[0.6875rem] bg-[#171B17] px-1.5 py-0.5 rounded border border-[#232A23]">
-                        lib/site-config.ts
-                      </code>{" "}
-                      üzerinden tanımlanır.
+                      Bu web sitesi konsept bir çalışma olup gerçek bir işletmeye ait iletişim bilgileri veya aktif randevu sistemi bulunmamaktadır.
                     </p>
                   </div>
                 </div>
                 <div className="shrink-0 self-start sm:self-center">
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[0.6875rem] font-medium text-[#B8F34A] bg-[#B8F34A]/10 border border-[#B8F34A]/20 whitespace-nowrap">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#B8F34A] shrink-0" />
-                    Entegrasyona Hazır
+                    Demo Gösterimi
                   </span>
                 </div>
               </div>

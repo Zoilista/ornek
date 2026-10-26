@@ -88,15 +88,22 @@ Tüm görseller doğrudan otomotiv detaylandırma, boya düzeltme, seramik kapla
 |-------|-------|----------------|
 | `hero-detailing-studio.jpg` | Hero | Hegzagon tavan LED ışıkları altında süper spor otomobil ve stüdyo |
 | `service-interior-detailing.jpg` | Hizmet 01 | Deri direksiyon ve konsol havalandırma kanallarının fırçayla detay temizliği |
-| `service-paint-correction.jpg` | Hizmet 02 | Rupes polisaj makinesi ve LED kontrol ışığıyla kademeli boya düzeltme |
-| `service-ceramic-coating.jpg` | Hizmet 03 | Süet aplikatör bloğu ile 9H nano seramik kaplama uygulaması |
+| `service-paint-correction.jpg` | Hizmet 02 | Polisaj makinesi ve LED kontrol ışığıyla kademeli boya düzeltme |
+| `service-ceramic-coating.jpg` | Hizmet 03 | Süet aplikatör bloğu ile koruyucu seramik kaplama uygulaması |
 | `service-paint-protection.jpg` | Hizmet 04 | Ön çamurluk ve far çevresine şeffaf boya koruma filmi (PPF) montajı |
 | `gallery-studio.jpg` | Galeri 01 | Stüdyo showroomunda sergilenen spor otomobil |
-| `gallery-paint-correction.jpg` | Galeri 02 | Metalik mavi boya üzerinde polisaj makinesiyle ayna parlaklığı düzeltme |
-| `gallery-ceramic-beading.jpg` | Galeri 03 | Seramik kaplama sonrası yüzeyde yüksek temas açılı hidrofobik su damlacıkları |
+| `gallery-paint-correction.jpg` | Galeri 02 | Metalik mavi boya üzerinde polisaj makinesiyle boya düzeltme |
+| `gallery-ceramic-beading.jpg` | Galeri 03 | Koruyucu kaplama sonrası yüzeyde hidrofobik su damlacıkları |
 | `gallery-interior-wide.jpg` | Galeri 04 | Alcantara direksiyon, yeşil dikişli karbon bucket koltuklar ve deri kokpit |
 | `gallery-ppf-installation.jpg` | Galeri 05 | Karbon ayna kapağı üzerine şeffaf PPF montajı |
 | `gallery-equipment.jpg` | Galeri 06 | Profesyonel polisaj makineleri, pedler, kimyasallar ve fırçalarla servis arabası |
+
+### Görsel Kaynakları ve Lisans Bilgileri
+
+Web sitesindeki fotoğraflar, kurgusal portföy sunumunu görselleştirmek amacıyla kullanılan **temsili ve illustrative** otomotiv fotoğraflarıdır:
+- **Kaynak / Lisans:** Görseller [Unsplash](https://unsplash.com) lisansı kapsamında ticari ve ticari olmayan kullanım haklarına uygun olarak temin edilmiştir.
+- **Temsil Durumu:** Fotoğraflar kurgusal 42Torque Detail Lab işletmesinin bizzat gerçekleştirdiği uygulamaları temsil etmez; modern detailing süreçlerini ve portföy estetiğini somutlaştırmak için örnek olarak konumlandırılmıştır.
+- **Erişilebilirlik:** Tüm `alt` etiketleri tarafsız ve teknik olarak doğru tanımlamalarla yapılandırılmıştır.
 
 ---
 

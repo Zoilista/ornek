@@ -10,7 +10,7 @@ export const siteConfig = {
   // Brand
   brandName: "42Torque",
   brandSuffix: "DETAIL LAB",
-  slogan: "Aracının en iyi hâli, detaylarda başlar.",
+  slogan: "Aracınızın en iyi hâli, detaylarda başlar.",
   description:
     "42Torque Detail Lab için hazırlanan kurgusal premium otomotiv detailing demosu. Araç bakımı, pasta-cila, seramik kaplama ve boya koruma hizmetlerini keşfedin.",
 

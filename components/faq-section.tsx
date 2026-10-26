@@ -12,28 +12,28 @@ const faqItems: FaqItem[] = [
   {
     question: "Detailing ile standart araç yıkama arasındaki fark nedir?",
     answer:
-      "Standart araç yıkama, aracın yüzeysel temizliğini sağlarken detailing; boya yüzeyinin derinlemesine temizlenmesini, pasta-cila uygulamalarını, iç mekan detay çalışmalarını ve koruyucu kaplamaları kapsar. Detailing, aracın her yüzeyine ayrı ayrı odaklanarak uzun vadeli bir bakım sağlamayı hedefler.",
+      "Standart araç yıkama, aracın yüzeysel temizliğini sağlarken detailing; boya yüzeyinin derinlemesine temizlenmesini, polisaj uygulamalarını, iç mekan detay çalışmalarını ve koruyucu kaplamaları kapsar. Detailing, aracın her yüzeyine ayrı ayrı odaklanarak uzun vadeli bir bakım sağlamayı hedefler.",
   },
   {
     question:
       "Aracım için hangi hizmetin uygun olduğunu nasıl öğrenebilirim?",
     answer:
-      "Uygun hizmet; aracının yaşı, boya durumu, kullanım alışkanlıkları ve beklentilerine göre belirlenir. En doğru değerlendirme için aracının mevcut durumunu inceleyerek bir öneri sunmak gerekir. Bu konuda iletişime geçerek bilgi alabilirsiniz.",
+      "Uygun hizmet; aracınızın yaşı, boya durumu, kullanım alışkanlıkları ve beklentilerinize göre belirlenir. En doğru değerlendirme için aracınızın mevcut durumunu inceleyerek bir öneri sunulması gerekir. Bu konuda bizimle iletişime geçebilirsiniz.",
   },
   {
     question: "Seramik kaplama her araç için gerekli midir?",
     answer:
-      "Seramik kaplama, boya yüzeyini korumak için etkili bir çözüm olmakla birlikte her araç için zorunlu değildir. Yeni araçlar, boya değeri yüksek araçlar veya açık havada park edilen araçlar için daha sık tercih edilir. Aracının durumuna göre alternatif koruma çözümleri de değerlendirilebilir.",
+      "Seramik kaplama, boya yüzeyini korumak için etkili bir çözüm olmakla birlikte her araç için zorunlu değildir. Yeni araçlar, boya kondisyonu yüksek araçlar veya açık alanda park edilen araçlar için daha sık tercih edilir. Aracınızın durumuna göre alternatif koruma çözümleri de değerlendirilebilir.",
   },
   {
     question: "Uygulamalar için önceden iletişime geçebilir miyim?",
     answer:
-      "Evet. Herhangi bir uygulama için önceden bilgi almak ve değerlendirme yapmak üzere iletişime geçebilirsiniz. Bu sayede ihtiyacınıza uygun hizmet ve planlama konusunda daha doğru bir yönlendirme yapılabilir.",
+      "Evet. Herhangi bir uygulama için önceden bilgi almak ve değerlendirme yapmak üzere bizimle iletişime geçebilirsiniz. Bu sayede ihtiyacınıza uygun hizmet ve planlama konusunda daha doğru bir yönlendirme yapılabilir.",
   },
   {
     question: "Fiyat teklifi nasıl alabilirim?",
     answer:
-      "Fiyat teklifi için iletişim bölümündeki kanallardan ulaşabilirsiniz. Teklif; aracın markası, modeli, boya durumu ve istenen hizmete göre değişebileceğinden yerinde değerlendirme veya fotoğraf üzerinden ön bilgi verilmesi önerilir.",
+      "Fiyat bilgisi için iletişim bölümündeki kanallardan bize ulaşabilirsiniz. Uygulama maliyeti; aracın boyutu, mevcut boya durumu ve talep edilen hizmet kapsamına göre değişiklik gösterir.",
   },
 ];
 
@@ -80,7 +80,7 @@ function AccordionItem({
         hidden={!isOpen}
       >
         <div className="pb-5 pr-2 sm:pr-8">
-          <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed break-words">{item.answer}</p>
+          <p className="text-[#A3AAA1] text-sm sm:text-base leading-relaxed break-words">{item.answer}</p>
         </div>
       </div>
     </div>
@@ -112,10 +112,10 @@ export default function FaqSection() {
               id="faq-heading"
               className="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-[#F2F4EF] mb-4 break-words"
             >
-              Aklındaki Sorular
+              Sıkça Sorulan Sorular
             </h2>
-            <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed break-words">
-              Yanıtını bulamadığın sorular için iletişim bölümünden ulaşabilirsin.
+            <p className="text-[#A3AAA1] text-sm leading-relaxed break-words">
+              Yanıtını bulamadığınız sorular ve detaylı bilgi için bizimle iletişime geçebilirsiniz.
             </p>
           </div>
 

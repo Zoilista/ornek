@@ -7,21 +7,21 @@ interface ProcessStep {
 const steps: ProcessStep[] = [
   {
     number: "01",
-    title: "İhtiyacı Belirle",
+    title: "İhtiyaç Analizi",
     description:
-      "Aracının ihtiyaçlarını ve tercih ettiğin uygulamaları birlikte değerlendirelim.",
+      "Aracınızın mevcut boya ve iç mekan kondisyonunu, beklentilerinize uygun şekilde değerlendiriyoruz.",
   },
   {
     number: "02",
-    title: "Uygun Uygulamayı Planla",
+    title: "Uygulama Planı",
     description:
-      "Aracın ve yüzeylerin ihtiyaçlarına uygun bir bakım planı oluşturalım.",
+      "Yüzey yapısına ve aracınızın kullanım koşullarına en uygun işlem adımlarını ve takvimi belirliyoruz.",
   },
   {
     number: "03",
-    title: "Detaylara Odaklan",
+    title: "Hassas İşçilik",
     description:
-      "Her aşamada kontrollü, özenli ve planlı bir uygulama yaklaşımı benimseyelim.",
+      "Kontrollü atölye koşullarında, her adımda yüzeye duyarlı ekipmanlar ve titiz el işçiliğiyle çalışıyoruz.",
   },
 ];
 
@@ -69,7 +69,7 @@ function ProcessStep({
           <h3 className="text-[#F2F4EF] font-semibold text-base sm:text-lg mb-2 break-words">
             {step.title}
           </h3>
-          <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed break-words">
+          <p className="text-[#A3AAA1] text-sm leading-relaxed break-words">
             {step.description}
           </p>
         </div>
@@ -109,15 +109,6 @@ export default function ProcessSection() {
               isLast={index === steps.length - 1}
             />
           ))}
-        </div>
-
-        {/* Bottom note */}
-        <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-[#232A23]">
-          <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed max-w-2xl break-words">
-            Bu bölüm, 42Torque Detail Lab&apos;ın önerdiği hizmet sürecini
-            temsilen hazırlanmıştır. Gerçek uygulama süreci araç durumuna ve
-            seçilen hizmete göre farklılık gösterebilir.
-          </p>
         </div>
       </div>
     </section>
