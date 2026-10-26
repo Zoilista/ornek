@@ -3,51 +3,47 @@ import { siteConfig } from "@/lib/site-config";
 
 interface ContactChannel {
   id: string;
+  badge: string;
   title: string;
   description: string;
   icon: React.ReactNode;
   value: string | null;
   href: string | null;
-  placeholderBadge: string;
-  placeholderHint: string;
 }
 
 export default function ContactSection() {
   const channels: ContactChannel[] = [
     {
       id: "telefon",
-      title: "Telefon & Birebir Danışmanlık",
+      badge: "TELEFON",
+      title: "Telefon Danışmanlığı",
       description:
-        "Uygulama seçenekleri, boya koruma paketleri ve güncel randevu takvimi için birebir görüşme.",
+        "Uygulama seçenekleri, boya koruma paketleri ve randevu planlaması için doğrudan görüşün.",
       icon: <Phone size={20} className="shrink-0" />,
       value: siteConfig.phone,
       href: siteConfig.phone ? `tel:${siteConfig.phone}` : null,
-      placeholderBadge: "Doğrudan İletişim Hattı",
-      placeholderHint: "İstemci yayını sırasında kurumsal santrale bağlanır.",
     },
     {
       id: "whatsapp",
+      badge: "WHATSAPP",
       title: "WhatsApp Ön Değerlendirme",
       description:
-        "Aracının güncel durumunu gösteren fotoğrafları ileterek hızlı ön inceleme ve öneri talep etme.",
+        "Aracınızın güncel fotoğraflarını ileterek hızlı durum analizi ve servis tavsiyesi talep edin.",
       icon: <MessageCircle size={20} className="shrink-0" />,
       value: siteConfig.whatsapp,
       href: siteConfig.whatsapp
         ? `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}`
         : null,
-      placeholderBadge: "Görsel İnceleme Kanalı",
-      placeholderHint: "Fotoğraf & video ile ön ekspertiz için yapılandırılır.",
     },
     {
       id: "konum",
-      title: "Stüdyo & Randevulu Kabul",
+      badge: "KONUM",
+      title: "Stüdyo Randevusu",
       description:
         "Kontrollü LED aydınlatma altında boya mikron ölçümü ve yüzey analiz seansı.",
       icon: <MapPin size={20} className="shrink-0" />,
       value: siteConfig.location,
       href: siteConfig.locationMapUrl,
-      placeholderBadge: "Özel Kabul Seansı",
-      placeholderHint: "Stüdyo adresi ve Google Maps rotası ile eşleştirilir.",
     },
   ];
 
@@ -93,47 +89,48 @@ export default function ContactSection() {
                       : "border-[#232A23] hover:border-[#2E382E]"
                   }`}
                 >
-                  {/* Top row: Icon + status badge */}
-                  <div className="flex items-start justify-between gap-3 mb-4 sm:mb-5">
+                  {/* Top row: Icon + short badge */}
+                  <div className="flex items-center justify-between gap-3 mb-4 sm:mb-5">
                     <div
                       className={`w-11 h-11 rounded-full flex items-center justify-center border shrink-0 transition-colors duration-200 ${
                         isConfigured
-                          ? "border-[#2E382E] text-[#B8F34A] group-hover:bg-[#B8F34A] group-hover:text-[#090B0A] group-hover:border-[#B8F34A]"
+                          ? "border-[#2E382E] text-[#B8F34A] bg-[#111411] group-hover:bg-[#B8F34A] group-hover:text-[#090B0A] group-hover:border-[#B8F34A]"
                           : "border-[#2E382E] text-[#B8F34A] bg-[#111411]"
                       }`}
                     >
                       {ch.icon}
                     </div>
 
-                    {isConfigured ? (
-                      <div className="text-[#B8F34A] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ArrowUpRight size={16} />
-                      </div>
-                    ) : (
-                      <span className="text-[0.6875rem] font-medium text-[#A3AAA1] px-2.5 py-1 rounded-full bg-[#111411] border border-[#232A23] text-right leading-tight break-words max-w-[calc(100%-3.5rem)]">
-                        {ch.placeholderBadge}
+                    <div className="flex items-center gap-2 shrink-0">
+                      <span className="text-[0.6875rem] font-bold tracking-wider text-[#A3AAA1] px-2.5 py-1 rounded-full bg-[#111411] border border-[#232A23] uppercase">
+                        {ch.badge}
                       </span>
-                    )}
+                      {isConfigured && (
+                        <div className="text-[#B8F34A] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <ArrowUpRight size={16} />
+                        </div>
+                      )}
+                    </div>
                   </div>
 
                   {/* Title & description */}
-                  <h3 className="text-[#F2F4EF] font-semibold text-base mb-2 break-words">
+                  <h3 className="text-[#F2F4EF] font-semibold text-base sm:text-lg mb-2 leading-snug">
                     {ch.title}
                   </h3>
-                  <p className="text-[#A3AAA1] text-xs leading-relaxed flex-1 mb-4 break-words">
+                  <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed flex-1 mb-4">
                     {ch.description}
                   </p>
 
                   {/* Bottom channel indicator */}
-                  <div className="pt-3 border-t border-[#232A23] mt-auto">
+                  <div className="pt-3.5 border-t border-[#232A23] mt-auto">
                     {isConfigured ? (
-                      <span className="text-[#B8F34A] text-xs font-semibold tracking-wide break-words">
+                      <span className="text-[#B8F34A] text-xs sm:text-sm font-semibold tracking-wide">
                         {ch.value}
                       </span>
                     ) : (
-                      <span className="text-[#A3AAA1]/70 text-[0.6875rem] flex items-center gap-1.5 break-words">
+                      <span className="text-[#A3AAA1]/70 text-xs flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#B8F34A]/50 shrink-0" />
-                        <span className="leading-tight">{ch.placeholderHint}</span>
+                        <span>Canlı yayında aktifleşir</span>
                       </span>
                     )}
                   </div>
@@ -161,7 +158,7 @@ export default function ContactSection() {
                   key={ch.id}
                   id={`contact-${ch.id}`}
                   role="region"
-                  aria-label={`${ch.title} — ${ch.placeholderBadge}`}
+                  aria-label={`${ch.title} — ${ch.badge}`}
                   className="block h-full"
                 >
                   {cardContent}
@@ -172,30 +169,27 @@ export default function ContactSection() {
 
           {/* Unified demo explanation banner */}
           {siteConfig.isDemo && (
-            <div className="mt-8 p-5 sm:p-6 rounded-[0.75rem] border border-[#232A23] bg-[#111411]/90 backdrop-blur-sm">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="flex items-start gap-3.5 min-w-0">
-                  <div className="w-8 h-8 rounded-full bg-[#B8F34A]/10 border border-[#B8F34A]/30 flex items-center justify-center text-[#B8F34A] shrink-0 mt-0.5">
-                    <Sparkles size={16} />
+            <div className="mt-8 p-4 sm:p-5 rounded-[0.75rem] border border-[#232A23] bg-[#111411]/80 backdrop-blur-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="w-7 h-7 rounded-full bg-[#B8F34A]/10 border border-[#B8F34A]/30 flex items-center justify-center text-[#B8F34A] shrink-0">
+                    <Sparkles size={14} />
                   </div>
                   <div className="min-w-0">
-                    <h4 className="text-[#F2F4EF] font-semibold text-sm mb-1 break-words">
-                      Kurgusal Portföy Gösterimi
-                    </h4>
-                    <p className="text-[#A3AAA1] text-xs leading-relaxed max-w-2xl break-words">
-                      Bu web sitesi, otomotiv ve detailing işletmelerine yönelik
-                      dijital vitrin ve kullanıcı deneyimi standartlarını
-                      sergilemek amacıyla hazırlanmıştır. Canlı müşteri
-                      entegrasyonunda telefon, WhatsApp ve atölye adresi{" "}
-                      <code className="text-[#B8F34A] font-mono text-[0.6875rem] bg-[#171B17] px-1.5 py-0.5 rounded border border-[#232A23] whitespace-nowrap">
+                    <p className="text-[#A3AAA1] text-xs leading-relaxed">
+                      <span className="text-[#F2F4EF] font-medium mr-1.5">
+                        Kurgusal Portföy Gösterimi:
+                      </span>
+                      Müşteri yayını sırasında telefon, WhatsApp ve atölye adresi{" "}
+                      <code className="text-[#B8F34A] font-mono text-[0.6875rem] bg-[#171B17] px-1.5 py-0.5 rounded border border-[#232A23]">
                         lib/site-config.ts
                       </code>{" "}
-                      üzerinden tanımlanarak tüm bağlantılar anında aktifleşir.
+                      üzerinden tanımlanır.
                     </p>
                   </div>
                 </div>
                 <div className="shrink-0 self-start sm:self-center">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[0.6875rem] font-medium text-[#B8F34A] bg-[#B8F34A]/10 border border-[#B8F34A]/20 whitespace-nowrap">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[0.6875rem] font-medium text-[#B8F34A] bg-[#B8F34A]/10 border border-[#B8F34A]/20 whitespace-nowrap">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#B8F34A] shrink-0" />
                     Entegrasyona Hazır
                   </span>

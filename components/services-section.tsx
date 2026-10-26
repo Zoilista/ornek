@@ -123,11 +123,11 @@ function ServiceCard({
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 p-5 sm:p-6 gap-3 min-w-0">
-        <h3 className="text-[#F2F4EF] font-semibold text-base sm:text-lg leading-snug break-words">
+      <div className="flex flex-col flex-1 p-5 sm:p-6 min-w-0">
+        <h3 className="text-[#F2F4EF] font-semibold text-base sm:text-lg leading-snug mb-2">
           {service.title}
         </h3>
-        <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed flex-1 break-words">
+        <p className="text-[#A3AAA1] text-xs sm:text-sm leading-relaxed mb-4 flex-1">
           {service.shortDescription}
         </p>
 
@@ -137,13 +137,13 @@ function ServiceCard({
           onClick={() => onOpenDetails(service)}
           aria-haspopup="dialog"
           aria-label={`${service.title} hizmet detaylarını incele`}
-          className="flex items-center justify-between gap-3 w-full pt-3.5 mt-auto border-t border-[#232A23] text-left group/btn focus-visible:ring-1 focus-visible:ring-[#B8F34A] rounded-sm cursor-pointer"
+          className="flex items-center justify-between gap-3 w-full min-h-[44px] pt-3.5 mt-auto border-t border-[#232A23] text-left group/btn focus-visible:ring-1 focus-visible:ring-[#B8F34A] rounded-sm cursor-pointer"
         >
-          <span className="text-[#B8F34A] text-xs font-semibold tracking-wide uppercase group-hover/btn:underline min-w-0 break-words leading-tight">
-            Uygulama Detayları
+          <span className="text-[#B8F34A] text-xs sm:text-sm font-semibold group-hover/btn:text-[#d4ff6e] transition-colors leading-none min-w-0">
+            Detayları Gör
           </span>
-          <div className="w-6 h-6 rounded-full bg-[#111411] border border-[#232A23] flex items-center justify-center text-[#B8F34A] shrink-0 group-hover/btn:border-[#B8F34A] group-hover/btn:bg-[#B8F34A] group-hover/btn:text-[#090B0A] transition-colors duration-200">
-            <ArrowUpRight size={13} className="shrink-0" />
+          <div className="w-7 h-7 rounded-full bg-[#111411] border border-[#232A23] flex items-center justify-center text-[#B8F34A] shrink-0 group-hover/btn:border-[#B8F34A] group-hover/btn:bg-[#B8F34A] group-hover/btn:text-[#090B0A] transition-colors duration-200">
+            <ArrowUpRight size={14} className="shrink-0" />
           </div>
         </button>
       </div>
@@ -314,7 +314,7 @@ export default function ServicesSection() {
               <button
                 type="button"
                 onClick={handleContactScroll}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#B8F34A] text-[#090B0A] text-xs sm:text-sm font-semibold rounded-[0.375rem] hover:bg-[#8fc435] transition-colors shrink-0 text-center cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 min-h-[44px] bg-[#B8F34A] text-[#090B0A] text-xs sm:text-sm font-semibold rounded-[0.375rem] hover:bg-[#8fc435] transition-colors shrink-0 text-center cursor-pointer"
               >
                 <span>İletişime Geç & Bilgi Al</span>
                 <ArrowRight size={15} className="shrink-0" />

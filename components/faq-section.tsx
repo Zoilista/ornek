@@ -61,12 +61,12 @@ function AccordionItem({
           aria-expanded={isOpen}
           aria-controls={panelId}
           onClick={onToggle}
-          className="w-full flex items-center justify-between gap-4 py-4 sm:py-5 text-left text-[#F2F4EF] font-medium text-sm sm:text-base hover:text-[#B8F34A] transition-colors duration-200 group focus-visible:ring-1 focus-visible:ring-[#B8F34A] rounded-sm cursor-pointer"
+          className="w-full flex items-start justify-between gap-4 py-4 sm:py-5 min-h-[44px] text-left text-[#F2F4EF] font-medium text-sm sm:text-base hover:text-[#B8F34A] transition-colors duration-200 group focus-visible:ring-1 focus-visible:ring-[#B8F34A] rounded-sm cursor-pointer"
         >
-          <span className="min-w-0 break-words pr-2 leading-snug">{item.question}</span>
+          <span className="min-w-0 pr-2 leading-snug">{item.question}</span>
           <span
             aria-hidden="true"
-            className="flex-shrink-0 w-7 h-7 rounded-full border border-[#2E382E] flex items-center justify-center text-[#B8F34A] group-hover:border-[#B8F34A] transition-colors duration-200 shrink-0"
+            className="flex-shrink-0 w-7 h-7 rounded-full border border-[#2E382E] flex items-center justify-center text-[#B8F34A] group-hover:border-[#B8F34A] transition-colors duration-200 shrink-0 mt-0.5"
           >
             {isOpen ? <Minus size={14} className="shrink-0" /> : <Plus size={14} className="shrink-0" />}
           </span>

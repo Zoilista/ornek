@@ -13,7 +13,7 @@ function ScrollCTA({
   return (
     <a
       href={href}
-      className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-[0.375rem] text-sm font-semibold transition-all duration-200 text-center break-words max-w-full ${
+      className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[44px] rounded-[0.375rem] text-sm font-semibold transition-all duration-200 text-center whitespace-nowrap max-w-full ${
         variant === "primary"
           ? "bg-[#B8F34A] text-[#090B0A] hover:bg-[#8fc435] hover:gap-3"
           : "border border-[#2E382E] text-[#F2F4EF] hover:border-[#B8F34A] hover:text-[#B8F34A]"
