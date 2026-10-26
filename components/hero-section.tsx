@@ -35,8 +35,8 @@ export default function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=85&auto=format&fit=crop"
-          alt="Premium araç bir detailing atölyesinde"
+          src="/images/hero-detailing-studio.jpg"
+          alt="42Torque Detail Lab stüdyosunda tavan hegzagon LED aydınlatması altında kusursuz detaylandırılmış süper spor araç"
           fill
           priority
           className="object-cover object-center"

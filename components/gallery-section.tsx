@@ -11,48 +11,48 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: "g1",
-    src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=80&auto=format&fit=crop",
-    alt: "Atölyede duran premium bir araç",
-    label: "Atölye",
+    src: "/images/gallery-studio.jpg",
+    alt: "42Torque stüdyo showroomunda hegzagon LED aydınlatması altında sergilenen süper spor araç",
+    label: "Stüdyo & Showroom",
     span: "tall",
   },
   {
     id: "g2",
-    src: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=700&q=80&auto=format&fit=crop",
-    alt: "Boya yüzeyine pasta uygulaması",
-    label: "Pasta & Cila",
+    src: "/images/gallery-paint-correction.jpg",
+    alt: "Metalik mavi spor otomobil panelinde profesyonel polisaj makinesi ve pasta ile ayna parlaklığı düzeltme",
+    label: "Boya Düzeltme",
   },
   {
     id: "g3",
-    src: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=700&q=80&auto=format&fit=crop",
-    alt: "Seramik kaplama uygulaması detayı",
-    label: "Seramik Kaplama",
+    src: "/images/gallery-ceramic-beading.jpg",
+    alt: "Seramik kaplamalı derin siyah boya üzerinde hegzagon tavan ışığı yansıması ve kusursuz hidrofobik su damlacıkları",
+    label: "Hidrofobik Koruma",
   },
   {
     id: "g4",
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop",
-    alt: "Araç iç mekan detay temizliği",
-    label: "İç Temizlik",
+    src: "/images/gallery-interior-wide.jpg",
+    alt: "Kusursuz kondisyonda alcantara direksiyon simidi, yeşil dikiş detaylı karbon bucket koltuklar ve deri kokpit",
+    label: "Kabin Detaylandırma",
     span: "wide",
   },
   {
     id: "g5",
-    src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=80&auto=format&fit=crop",
-    alt: "Araç boya koruma filmi uygulaması",
-    label: "Boya Koruma",
+    src: "/images/gallery-ppf-installation.jpg",
+    alt: "Karbon ayna kapağı üzerine hassas şeffaf boya koruma filmi montajı ve montaj solüsyonu",
+    label: "PPF Şeffaf Kaplama",
   },
   {
     id: "g6",
-    src: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=700&q=80&auto=format&fit=crop",
-    alt: "Detaylandırma ekipmanları ve profesyonel uygulama",
-    label: "Ekipman",
+    src: "/images/gallery-equipment.jpg",
+    alt: "Paslanmaz servis arabasında düzenli profesyonel polisaj makineleri, renkli pedler, kimyasallar ve fırçalar",
+    label: "Ekipman & Kimyasallar",
   },
 ];
 
 function GalleryCard({ item }: { item: GalleryItem }) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-[0.75rem] bg-[#171B17] ${
+      className={`group relative overflow-hidden rounded-[0.75rem] bg-[#171B17] border border-[#232A23] hover:border-[#2E382E] transition-all duration-300 ${
         item.span === "tall"
           ? "row-span-2"
           : item.span === "wide"
@@ -62,7 +62,7 @@ function GalleryCard({ item }: { item: GalleryItem }) {
     >
       <div
         className={`relative w-full ${
-          item.span === "tall" ? "h-full min-h-[400px]" : "h-56 sm:h-64"
+          item.span === "tall" ? "h-full min-h-[420px]" : "h-56 sm:h-64"
         }`}
       >
         <Image
@@ -73,10 +73,10 @@ function GalleryCard({ item }: { item: GalleryItem }) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#090B0A]/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#090B0A]/85 via-[#090B0A]/20 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300" />
 
         {/* Label */}
-        <div className="absolute bottom-4 left-4 flex items-center gap-2 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
+        <div className="absolute bottom-4 left-4 flex items-center gap-2 translate-y-0.5 group-hover:translate-y-0 transition-transform duration-300">
           <span className="w-1.5 h-1.5 rounded-full bg-[#B8F34A]" />
           <span className="text-[#F2F4EF] text-xs font-semibold tracking-wider uppercase">
             {item.label}
@@ -91,7 +91,7 @@ export default function GallerySection() {
   return (
     <section
       id="uygulamalar"
-      className="py-24 lg:py-32 bg-[#111411]"
+      className="py-24 lg:py-32 bg-[#111411] scroll-mt-20"
       aria-labelledby="gallery-heading"
     >
       <div className="container-site">
@@ -111,8 +111,7 @@ export default function GallerySection() {
             </h2>
           </div>
           <p className="text-[#A3AAA1] text-sm leading-relaxed max-w-xs">
-            Bu görseller genel detaylandırma çalışmalarını temsilen sunulmuş
-            örneklerdir.
+            42Torque Detail Lab standartlarında stüdyo ortamı, pasta-cila, seramik kaplama ve PPF uygulamalarından kareler.
           </p>
         </div>
 

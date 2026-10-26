@@ -82,7 +82,7 @@ export default function ProcessSection() {
   return (
     <section
       id="surec"
-      className="py-24 lg:py-32 bg-[#090B0A]"
+      className="py-24 lg:py-32 bg-[#090B0A] scroll-mt-20"
       aria-labelledby="process-heading"
     >
       <div className="container-site">

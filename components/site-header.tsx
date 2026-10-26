@@ -37,11 +37,20 @@ export default function SiteHeader() {
     [closeMenu]
   );
 
-  // Prevent body scroll when menu is open
+  // Prevent body scroll and handle Escape when menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [isOpen]);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeMenu();
+    };
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, closeMenu]);
 
   return (
     <header
